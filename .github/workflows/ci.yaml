@@ -20,8 +20,8 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v8
         with:
-          version: v2.3.0
-          args: --disable-all --enable=golint --enable=govet,errcheck,staticcheck,unused,gosimple
+          version: v2.1.0
+          args: --timeout 5m
 
       - name: Run tests
         run: go test -v ./...
