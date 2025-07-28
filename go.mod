@@ -1,3 +1,4 @@
 module go-practice
 
-go 1.22.10
+// GitHub Actionsのバージョンに合わせる
+go 1.23
