@@ -1,3 +1,7 @@
 {
-    "go.formatTool": "gofmt"
+    "go.formatTool": "gofmt",
+    "go.lintTool": "golint",
+    "go.lintFlags": [
+        "--fast"
+    ]
 }
