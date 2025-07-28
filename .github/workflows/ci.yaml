@@ -12,15 +12,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
-          go-version: '1.23'
-          cache: false
+          go-version-file: go.mod
+          cache: true
 
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@v4
+        uses: golangci/golangci-lint-action@v8
         with:
-          version: v1.50.0
+          version: v2.3.0
           args: --disable-all --enable=golint --enable=govet,errcheck,staticcheck,unused,gosimple
 
       - name: Run tests
